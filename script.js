@@ -44,30 +44,24 @@ function updateColorSelection () {
 
   if (positionFromTop <= 300) {
     $('.color-name').html("red");
-    $('li.color-red').css('background', 'red')
-    $('li.color-red').addClass('selected');
+    $('li.color-red').css('background', 'red').addClass('selected');
   } else if (positionFromTop <= 1000) {
     $('.color-name').html("orange");
-    $('li.color-orange').css('background', 'orange')
-    $('li.color-orange').addClass('selected');
+    $('li.color-orange').css('background', 'orange').addClass('selected');
   } else if (positionFromTop <= 1500) {
     $('.color-name').html("yellow");
-    $('li.color-yellow').css('background', 'yellow')
-    $('li.color-yellow').addClass('selected');
+    $('li.color-yellow').css('background', 'yellow').addClass('selected');
   } else if (positionFromTop <= 2000) {
     $('.color-name').html("green");
-    $('li.color-green').css('background', 'green')
-    $('li.color-green').addClass('selected');
+    $('li.color-green').css('background', 'green').addClass('selected');
   } else if (positionFromTop <= 2500) {
     $('.color-name').html("blue");
-    $('li.color-blue').css('background', 'blue')
-    $('li.color-blue').addClass('selected');
+    $('li.color-blue').css('background', 'blue').addClass('selected');
   } else if (positionFromTop <= 3000) {
     $('.color-name').html("indigo");
-    $('li.color-indigo').css('background', 'indigo')
-    $('li.color-indigo').addClass('selected');
+    $('li.color-indigo').css('background', 'indigo').addClass('selected');
   } else if (positionFromTop <= 3500) {
     $('.color-name').html("violet");
-    $('.color-violet').css('background', 'violet')
+    $('.color-violet').css('background', 'violet').addClass('selected');
   }
 };
