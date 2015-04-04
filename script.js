@@ -1,11 +1,19 @@
 var isClicked = false;
 
+$('nav li').mouseenter(function() {
+  var color = $(this).data('hex');
+  $(this).addClass('hover').css('background', color);
+}).mouseleave(function() {
+  if(!$(this).hasClass('selected')) {
+    $(this).removeClass('hover').css('background', 'none');
+  }
+});
+
 $('nav li').click(function() {
-  $('nav li').css('background', 'none');
-  $('nav li').removeClass('selected');
+  $('nav li').css('background', 'none').removeClass('selected');
 
     // look for data- attribute and add the parameter is 'color': data-color
-    console.log($(this).data('color'));
+    console.log($(this).data('hex'));
 
   var color = $(this).data('hex');
   $(this).css('background', color);
