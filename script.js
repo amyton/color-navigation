@@ -5,7 +5,7 @@ $('nav li').click(function() {
     // look for data- attribute and add the parameter is 'color': data-color
     console.log($(this).data('color'));
 
-  var color = $(this).data('color');
+  var color = $(this).data('hex');
   $(this).css('background', color);
   // "this" gives you the DOM element that was click on
   $(this).addClass('selected');
@@ -13,7 +13,12 @@ $('nav li').click(function() {
   // html grabs the text inside the html only
   console.log($(this).html());
   var colorNameTextValue = $(this).html();
-  $('.color-name').html(colorNameTextValue)
+  $('.color-name').html(colorNameTextValue);
+
+  var colorName = $(this).data('color');
+  var positionFromTop = $('.color-wrapper .color-' + colorName).offset().top;
+  $('body').animate({ scrollTop: (positionFromTop + 1) + 'px' });
+
 });
 
 console.log('Get all .color DOM elements:');
